@@ -1,8 +1,6 @@
 import React from "react";
 import Input from "./components/Input";
 
-// const StyledGoHome = withIcon(GoHome);
-
 const App = () => {
   return (
     <div>
