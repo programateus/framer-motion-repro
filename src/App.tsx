@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       {/* I want to pass placeholder as props here */}
-      {/* <Input placeholder="Nome" /> */}
+      {/* <Input placeholder="name" /> */}
       <Input />
     </div>
   );
