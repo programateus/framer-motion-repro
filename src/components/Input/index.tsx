@@ -1,19 +1,33 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import styled, { StyledComponent } from "styled-components";
+import {
+  motion,
+  useAnimation,
+  ForwardRefComponent,
+  HTMLMotionProps,
+} from "framer-motion";
 
-const StyledInput = styled(motion.input)`
-  padding: 10px 18px;
-  font-size: 16px;
-  margin: 2px 0;
-  border-radius: 4px;
-`;
+// This doesnt work
+// const Input: React.FC<ForwardRefComponent<
+//   HTMLInputElement,
+//   HTMLMotionProps<"input">
+// >> = ({ ...props }) => {
+//   const controls = useAnimation();
+
+//   return (
+//     <motion.input
+//       {...props}
+//       animate={controls}
+//       onFocus={() => controls.start({ scale: 1.1 })}
+//       onBlur={() => controls.start({ scale: 1 })}
+//     />
+//   );
+// };
 
 const Input: React.FC = ({ ...props }) => {
   const controls = useAnimation();
 
   return (
-    <StyledInput
+    <motion.input
       {...props}
       animate={controls}
       onFocus={() => controls.start({ scale: 1.1 })}
